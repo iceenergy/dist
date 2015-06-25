@@ -117,8 +117,9 @@
               <div class="form-group group-email" form-group>
                 <label class="col-sm-4">Email</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control" name="email" form-control email-validation validate-on-blur/>
+                  <input type="text" class="form-control" name="email" form-control email-validation aduser-validation validate-on-blur/>
                   <small class="help-block duplicate-user" ng-show="errors.duplicateUser">Email address is already registered</small>
+                  <small class="help-block validation-error" ng-show="aduserError">Active Directory users must be entered in Active Directory</small>
                   <small class="help-block validation-error" ng-show="validationError">Invalid email address</small>
                 </div>
               </div>
@@ -171,8 +172,9 @@
                 <label class="col-sm-6" ng-hide="retry">Send password reset instructions to:</label>
                 <label class="col-sm-6" ng-show="retry">Send new password reset email to:</label>
                 <div class="col-sm-6">
-                  <input id="forgotemail" type="text" class="form-control" name="email" form-control email-validation validate-on-blur/>
+                  <input id="forgotemail" type="text" class="form-control" name="email" form-control email-validation aduser-validation validate-on-blur/>
                   <small class="help-block wd-invalid-email" ng-show="validationError">Invalid email address</small>
+                  <small class="help-block wd-invalid-email" ng-show="aduserError">Active Directory users must set their password in Active Directory</small>
                   <small class="help-block wd-not-found" ng-show="notFound"><span>Account does not exist.</span></small>
                 </div>
               </div>
