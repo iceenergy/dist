@@ -120,7 +120,7 @@
                   <input type="text" class="form-control" name="email" form-control email-validation validate-on-blur/>
                   <small class="help-block duplicate-user" ng-show="errors.duplicateUser">Email address is already registered</small>
                   <small class="help-block validation-error" ng-show="errors.badEmailAddress">Invalid email address</small>
-                  <small class="help-block validation-error" ng-show="errors.adUser">Active Directory users are added in Active Directory</small>
+                  <small class="help-block aduser-error" ng-show="errors.adUser">Active Directory users are added in Active Directory</small>
                 </div>
               </div>
 
@@ -174,7 +174,7 @@
                 <div class="col-sm-6">
                   <input id="forgotemail" type="text" class="form-control" name="email" form-control email-validation validate-on-blur/>
                   <small class="help-block wd-invalid-email" ng-show="errors.badEmailAddress">Invalid email address</small>
-                  <small class="help-block wd-invalid-email" ng-show="errors.adUser">Use Active Directory to change the password for this account</small>
+                  <small class="help-block wd-aduser" ng-show="errors.adUser">Use Active Directory to change the password for this account</small>
                   <small class="help-block wd-not-found" ng-show="notFound"><span>Account does not exist.</span></small>
                 </div>
               </div>
@@ -316,7 +316,7 @@
       <small class="help-block" ng-show="errors.maxLength" wd-maxLength>Password is too long</small>
       <small class="help-block" ng-show="errors.requireNumeric" wd-requireNumeric>Password requires a number</small>
       <small class="help-block" ng-show="errors.requireDiacritical" wd-requireDiacritical>Password requires a diacritical character</small>
-      <small class="help-block" ng-show="errors.requireUpperCase" wd-requireUpperCase>Password requires a uppercase letter</small>
+      <small class="help-block" ng-show="errors.requireUpperCase" wd-requireUpperCase>Password requires an uppercase letter</small>
       <small class="help-block" ng-show="errors.requireLowerCase" wd-requireLowerCase>Password requires a lowercase letter</small>
     </script>
     <!--[if lt IE 7]>
