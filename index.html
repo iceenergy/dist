@@ -182,6 +182,10 @@
                 <br/>
                 <p>{{unknownError}}</p>
               </div>
+              <div class="alert alert-danger" ng-show="invalidAccount">
+                <strong>Sorry, an error occurred.  If this is an Active Directory account, please change the password in Active Directory.</strong>
+                <br/>
+              </div>
               <button class="btn btn-forgot btn-sp-green" type="submit">Reset Password</button>
             </form>
           </div>
