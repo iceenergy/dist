@@ -167,6 +167,8 @@ angular.module('stormpathIdpApp').controller('ForgotCtrl', [
   function ($scope, Stormpath, $routeParams, $rootScope) {
     $scope.notFound = false;
     $scope.sent = false;
+    $scope.adError = false;
+    $scope.unknownError = '';
     $scope.retry = $routeParams.retry || false;
     $scope.fields = {};
     $rootScope.$on('$locationChangeStart', function (e) {
