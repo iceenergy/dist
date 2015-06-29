@@ -182,6 +182,7 @@ angular.module('stormpathIdpApp').controller('ForgotCtrl', [
       if (inError.length > 0) {
         return;
       }
+      Stormpath.initialize();
       Stormpath.sendPasswordResetEmail($scope.fields.email.value.trim(), function (err) {
         if (err) {
           if (err.status === 400) {
