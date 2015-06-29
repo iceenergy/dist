@@ -165,10 +165,7 @@ angular.module('stormpathIdpApp').controller('ForgotCtrl', [
   '$routeParams',
   '$rootScope',
   function ($scope, Stormpath, $routeParams, $rootScope) {
-    $scope.notFound = false;
     $scope.sent = false;
-    $scope.adError = false;
-    $scope.unknownError = '';
     $scope.retry = $routeParams.retry || false;
     $scope.fields = {};
     $rootScope.$on('$locationChangeStart', function (e) {
@@ -178,6 +175,7 @@ angular.module('stormpathIdpApp').controller('ForgotCtrl', [
     });
     $scope.submit = function () {
       $scope.notFound = false;
+      $scope.adError = false;
       var inError = Object.keys($scope.fields).filter(function (f) {
           return $scope.fields[f].validate();
         });
